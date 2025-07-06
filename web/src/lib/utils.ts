@@ -2,7 +2,7 @@ import { clsx, type ClassValue } from 'clsx';
 import { twMerge } from 'tailwind-merge';
 import type { Timestamp } from './models/Post';
 
-export const API_URL = 'https://54.91.0.187:1234';
+export const API_URL = 'https://yap-api.aidan-neel.com';
 
 export function cn(...inputs: ClassValue[]) {
 	return twMerge(clsx(inputs));
