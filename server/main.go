@@ -25,6 +25,6 @@ func main() {
 	api := e.Group("/api")
 
 	routers.RegisterPostRoutes(api.Group("/posts"))
-
+	
 	e.Logger.Fatal(e.Start("127.0.0.1:1234"))
 }
