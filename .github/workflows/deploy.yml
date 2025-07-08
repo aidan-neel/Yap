@@ -40,6 +40,7 @@ jobs:
                   key: ${{ secrets.EC2_SSH_KEY }}
                   source: "app"
                   target: "/"
+                  overwrite: true
 
             - name: Set permissions and restart app
               uses: appleboy/ssh-action@v1.0.3
