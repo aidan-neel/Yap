@@ -35,7 +35,7 @@ func RegisterPostRoutes(g *echo.Group) {
 		}
 
 		return c.JSON(http.StatusOK, echo.Map{
-			"okyes":            true,
+			"success":            true,
 			"posts":         responses,
 			"rows_affected": int64(len(posts)),
 		})
