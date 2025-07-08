@@ -39,7 +39,7 @@ jobs:
                   username: ${{ secrets.EC2_USER }}
                   key: ${{ secrets.EC2_SSH_KEY }}
                   source: "app"
-                  target: "/app"
+                  target: "/"
 
             - name: Set permissions and restart app
               uses: appleboy/ssh-action@v1.0.3
