@@ -30,7 +30,7 @@ jobs:
                   username: ${{ secrets.EC2_USER }}
                   key: ${{ secrets.EC2_SSH_KEY }}
                   source: "app"
-                  target: "/tmp/app.tmp"
+                  target: "/app"
 
             - name: Restart app on EC2
               uses: appleboy/ssh-action@v1.0.3
@@ -39,7 +39,4 @@ jobs:
                   username: ${{ secrets.EC2_USER }}
                   key: ${{ secrets.EC2_SSH_KEY }}
                   script: |
-                      pkill -f /app || true
-                      mv /tmp/app.tmp /app
-                      chmod +x /app
-                      nohup /app > /dev/null 2>&1 &
+                      sudo systemctl restart app.service
